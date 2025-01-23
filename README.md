@@ -44,15 +44,16 @@ In test/test_bfs.py:
 	* runs pytest
 
 
-#Methods Description
+# Methods Description
 The bfs (Breadth-First Search) method in this project is based on the pseudocode provided in the Lecture Slides (Slides #24–38). These slides outline the core concepts and implementation flow of the BFS algorithm. Additionally, inspiration was drawn from a classic BFS post written in C++ available on GeeksforGeeks: Breadth-First Search or BFS for a Graph.
 
-Key elements of the implementation include:
+## Key elements of the implementation include:
 
 A queue data structure (deque) to efficiently manage nodes to be explored, as per the BFS principle.
 A visited set to ensure each node is processed only once, preventing redundant operations.
 A history dictionary to trace the parent nodes for reconstructing the shortest path when a target node (end) is provided.
-The design of the method considers edge cases such as:
+
+## The design of the method considers edge cases such as:
 
 Performing BFS on an empty graph.
 Handling graphs with disconnected components.
