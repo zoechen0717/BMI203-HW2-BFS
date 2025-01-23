@@ -50,16 +50,16 @@ These slides outline the core concepts and implementation flow of the BFS algori
 
 ## Key elements of the implementation include:
 
-	* A queue data structure (deque) to efficiently manage nodes to be explored, as per the BFS principle.
-	* A visited set to ensure each node is processed only once, preventing redundant operations.
-	* A history dictionary to trace the parent nodes for reconstructing the shortest path when a target node (end) is provided.
+* A queue data structure (deque) to efficiently manage nodes to be explored, as per the BFS principle.
+* A visited set to ensure each node is processed only once, preventing redundant operations.
+* A history dictionary to trace the parent nodes for reconstructing the shortest path when a target node (end) is provided.
 
 ## The design of the method considers edge cases such as:
 
-	* Performing BFS on an empty graph.
-	* Handling graphs with disconnected components.
-	* Dealing with invalid or non-existent start and end nodes.
-	* This hybrid approach ensures a robust and Pythonic implementation of BFS, combining theoretical foundations with practical insights from established examples.
+* Performing BFS on an empty graph.
+* Handling graphs with disconnected components.
+* Dealing with invalid or non-existent start and end nodes.
+* This hybrid approach ensures a robust and Pythonic implementation of BFS, combining theoretical foundations with practical insights from established examples.
 
 # Getting Started
 To get started you will need to fork this repository onto your own github. You will then work on the code base from your own repo and make changes to it in the form of commits.
