@@ -30,10 +30,13 @@ class Graph:
             raise ValueError("The graph is empty.")
         # Running BFS from a start node that does not exist in the graph
         if start not in self.graph:
-            raise ValueError("No Start node.")
+            raise ValueError("Start node invalid.")
+        # Running BFS from a invalid end node
+        if end is not None and end not in self.graph:
+            raise ValueError("End node invalid.")
 
         # Q = queue() ---> initialize queue
-        Q = deque()
+        Q = deque() # "deque() will make the queue process much faster" ---> from the geekforgeek post
         # visited = [ ] ---> initialize list of visited nodes
         visited = []
         #If an end node is provided and a path exists, returns a list of nodes in order of the shortest path to the end node
@@ -42,11 +45,11 @@ class Graph:
         # Q.push(source) ---> Push source node to queue
         Q.append(start)
         # visited.append(source) ---> Mark source node as visited
-        visited.add(start)
+        visited.append(start)
 
         # Loop through nodes in graph
-        while Q:
-            v = Q.popleft()
+        while Q: # while Q is not empty:
+            v = Q.popleft() # v = Q.pop(), deque.popleft() = list.pop() but much faster
 
             # Here we need to somehow detour from the psedo code
             # We need to consider the case that a end node provided and we need to reconstruct the shortest path.
@@ -61,7 +64,7 @@ class Graph:
             N = self.graph.neighbors(v) # N = neighbors(v)
             for w in N : # for all w in N:
                 if w not in visited: # if w not in visited:
-                    visited.add(w) # visited.append(w)
+                    visited.append(w) # visited.append(w)
                     history[w] = v
                     Q.append(w) # Q.push(w)
 
@@ -70,4 +73,4 @@ class Graph:
             return None
 
         # If there's no end node input, return a list nodes with the order of BFS traversal
-        return list(visited)
+        return visited
