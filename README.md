@@ -17,10 +17,10 @@ In search/graph.py:
 	* running bfs traversal on an unconnected graph
 	* running bfs from a start node that does not exist in the graph
 	* running bfs search for an end node that does not exist in the graph
-	* any other edge cases you can think of 
+	* any other edge cases you can think of
 
 In test/test_bfs.py:
-* Write unit tests for breadth-first traversal and breadth-first search 
+* Write unit tests for breadth-first traversal and breadth-first search
 * You may use the two networks provided in the data folder or create your own for testing
 * Test at least 2 possible edge cases (listed above)
 * Include a test case that fails and raises an exception
@@ -30,11 +30,11 @@ In test/test_bfs.py:
 
 * Write unit tests (in the test_bfs.py file) for your breadth first search
 * Replace these instructions with a brief description of bfs in your forked repo
-	
+
 * Automate Testing with a [Github Actions](https://docs.github.com/en/actions)
 
 	See blogposts below on helping set up github actions with pytest:
-	
+
 	* [post 1](https://blog.dennisokeeffe.com/blog/2021-08-08-pytest-with-github-actions)
 	* [post 2](https://mattsegal.dev/pytest-on-github-actions.html)
 	* Add "! [BuildStatus] (https://github.com/ < your-github-username > /HW2-BFS/workflows/HW2-BFS/badge.svg?event=push)" (update link and remove spaces) to the beginning of your readme file
@@ -43,13 +43,29 @@ In test/test_bfs.py:
 	Ensure that the github actions complete the following:
 	* runs pytest
 
+
+#Methods Description
+The bfs (Breadth-First Search) method in this project is based on the pseudocode provided in the Lecture Slides (Slides #24–38). These slides outline the core concepts and implementation flow of the BFS algorithm. Additionally, inspiration was drawn from a classic BFS post written in C++ available on GeeksforGeeks: Breadth-First Search or BFS for a Graph.
+
+Key elements of the implementation include:
+
+A queue data structure (deque) to efficiently manage nodes to be explored, as per the BFS principle.
+A visited set to ensure each node is processed only once, preventing redundant operations.
+A history dictionary to trace the parent nodes for reconstructing the shortest path when a target node (end) is provided.
+The design of the method considers edge cases such as:
+
+Performing BFS on an empty graph.
+Handling graphs with disconnected components.
+Dealing with invalid or non-existent start and end nodes.
+This hybrid approach ensures a robust and Pythonic implementation of BFS, combining theoretical foundations with practical insights from established examples.
+
 # Getting Started
-To get started you will need to fork this repository onto your own github. You will then work on the code base from your own repo and make changes to it in the form of commits. 
+To get started you will need to fork this repository onto your own github. You will then work on the code base from your own repo and make changes to it in the form of commits.
 
 # Reference Information
 ## Test Data
 Two networks have been provided in an adjacency list format readable by [networkx](https://networkx.org/), is a commonly used python package for working with graph structures. These networks consist of two types of nodes:
-* Faculty nodes 
+* Faculty nodes
 * Pubmed ID nodes
 
 However, since these are both stored as strings, you can treat them as equivalent nodes when traversing the graph. The first graph ("citation_network.adjlist") has nodes consisting of all BMI faculty members, the top 100 Pubmed papers *cited by* faculty, and the top 100 papers that *cite* faculty publications. Edges are directed and and edge from node A -> B indicates that node A *is cited by* node B. There are 5120 nodes and 9247 edges in this network.
@@ -74,4 +90,3 @@ Make sure to push all your code to github, ensure that your unit tests are corre
 ## Style (1 points)
 * Readable code with clear comments and method descriptions
 * Updated README with description of your methods
-
