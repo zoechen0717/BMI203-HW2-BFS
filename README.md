@@ -45,6 +45,12 @@ In test/test_bfs.py:
 
 
 # Methods Description
+
+![Diagram](image.png)
+<p align="center">
+  <img src="images/image.png" alt="Diagram" width="600">
+</p>
+
 The bfs (Breadth-First Search) method in this project is based on the pseudocode provided in the Lecture Slides (Slides #24–38).
 These slides outline the core concepts and implementation flow of the BFS algorithm. Additionally, inspiration was drawn from a classic BFS post written in C++ available on GeeksforGeeks: Breadth-First Search or BFS for a Graph.
 
