@@ -46,9 +46,9 @@ In test/test_bfs.py:
 
 # Methods Description
 
-![Diagram](image.png)
+!(image.png)
 <p align="center">
-  <img src="images/image.png" alt="Diagram" width="600">
+  <img src="image.png" alt="Diagram" width="100">
 </p>
 
 The bfs (Breadth-First Search) method in this project is based on the pseudocode provided in the Lecture Slides (Slides #24–38).
