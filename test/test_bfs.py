@@ -60,7 +60,7 @@ def test_bfs():
 
     # Test nodes that are not connected
     not_connect = graph.bfs('34533455', 'Marina Sirota')
-    assert not_connect == "None"
+    assert not_connect == None
 
     # Test invalid end node
     with pytest.raises(ValueError, match="End node invalid."):
